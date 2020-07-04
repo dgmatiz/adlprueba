@@ -10,7 +10,7 @@ import {TypeAccount} from "../../core/models/typeAccount";
 export class HomeComponent implements OnInit, AfterViewInit {
   accounts: any[] = []
   products: any[] = []
-  viewcard: string = 'BANCO_1'
+  viewcard: string = 'BANCO_3'
 
   constructor(private communicatorService: CommunicatorService) {
   }
@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.products.forEach(row => {
       this.accounts[TypeAccount[row.typeAccount]] = this.products.filter(value => value.typeAccount === row.typeAccount)
     });
-    console.log(this.accounts)
   }
 
   haveViewCard(value: any, viewcard: string) {

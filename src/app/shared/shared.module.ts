@@ -10,6 +10,7 @@ import {CardCreditComponent} from './card-credit/card-credit.component';
 import {CardCdtComponent} from './card-cdt/card-cdt.component';
 import {TranslateModule} from "@ngx-translate/core";
 import {MatIconModule} from "@angular/material/icon";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 
 @NgModule({
@@ -25,13 +26,18 @@ import {MatIconModule} from "@angular/material/icon";
   exports: [
     NotificationComponent,
     CarruselComponent,
-    CardDepositAccountComponent
+    CardDepositAccountComponent,
+    CardCdtComponent,
+    CardCreditComponent,
+    CardCreditCardComponent,
+    CardCurrentAccountComponent
   ],
   imports: [
     CommonModule,
     CarouselModule,
     TranslateModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ]
 })
 export class SharedModule {

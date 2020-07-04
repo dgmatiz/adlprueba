@@ -1,17 +1,12 @@
 <div class="card-body">
-  <div class="card-icon"><mat-icon>monetization_on</mat-icon></div>
-  <h5 class="card-title">{{ card.typeAccount | translate }}</h5>
+  <div class="card-icon"><mat-icon>money</mat-icon></div>
+  <h3 class="card-title">{{ card.typeAccount | translate }}</h3>
   <p class="card-text">No. {{card.accountInformation.accountIdentifier}}
   </p>
-  <br>Saldo disponible:
+  <br>{{getTextBalance()}}
   <h2>{{card.productAccountBalances.saldo_disponible.amount| currency: '$'}}</h2>
-  <div class="row">
-    <div class="col-sm-6">En Bolsillo</div>
-    <div class="col-sm-6">Saldo Total</div>
+
+  <div *ngIf="card.overDraftDays > 0" class="row">
+    <div class="col-sm-12">Dias en Sobregiro : {{card.overDraftDays}}</div>
   </div>
-  <div class="row">
-    <div class="col-sm-6">{{card.productAccountBalances.saldo_canje.amount| currency: '$'}}</div>
-    <div class="col-sm-6">{{card.productAccountBalances.saldo_actual.amount| currency: '$'}}</div>
-  </div>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>

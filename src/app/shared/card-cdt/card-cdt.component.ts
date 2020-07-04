@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-card-cdt',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-cdt.component.css']
 })
 export class CardCdtComponent implements OnInit {
+  @Input() card: any;
 
   constructor() { }
 

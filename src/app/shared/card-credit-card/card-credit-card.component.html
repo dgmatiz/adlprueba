@@ -1,1 +1,26 @@
-<p>card-credit-card works!</p>
+<div class="card-body">
+  <div class="row">
+    <div class="col-sm-6 card-icon text-sm-left">
+      <img src="{{getTypeCard()}}" width="50px"></div>
+    <div class="col-sm-6 card-detail text-sm-right"><a href="#">ver detalle ></a> </div>
+  </div>
+  <h3 class="card-title font-weight-bold">{{ card.typeAccount | translate }}</h3>
+  <p class="card-text">No. {{getNumberCard(card.accountInformation.accountIdentifier)}}
+  </p>
+  <br>Cupo disponible:
+  <h4>{{card.productAccountBalances.cupo_disponible_compras_pesos.amount| currency: '$'}}</h4>
+  <div class="row">
+    <div class="col-sm-12">Fecha de Corte : {{card.dueDate| date:'shortDate'}}</div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">Total gastado : {{getTotalGastado()| currency: '$'}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+    </div>
+  </div>
+      <div class="progress">
+        <mat-progress-bar mode="determinate" [value]="progressBarValue"></mat-progress-bar>
+      </div>
+</div>

@@ -8,9 +8,19 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CardCurrentAccountComponent implements OnInit {
   @Input() card: any;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  getTextBalance() {
+    let textBalance: string
+    if (this.card.productAccountBalances.saldo_disponible.amount < 0) {
+      textBalance = "En Sobregiro:";
+    } else {
+      textBalance = "Saldo disponible:";
+    }
+    return textBalance;
+  }
 }

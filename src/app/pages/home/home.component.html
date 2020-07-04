@@ -25,9 +25,22 @@
 
           <span *ngFor="let card of value">
             <div *ngIf="card.accountInformation.bank == viewcard" class="card card-account">
+              <span *ngIf="isTypeAcount(card.typeAccount, 0)">
+                <app-card-cdt [card]="card"></app-card-cdt>
+              </span>
+              <span *ngIf="isTypeAcount(card.typeAccount, 1)">
+                <app-card-credit [card]="card"></app-card-credit>
+              </span>
+              <span *ngIf="isTypeAcount(card.typeAccount, 2)">
+                <app-card-credit-card [card]="card"></app-card-credit-card>
+              </span>
+              <span *ngIf="isTypeAcount(card.typeAccount, 3)">
+                <app-card-current-account [card]="card"></app-card-current-account>
+              </span>
               <span *ngIf="isTypeAcount(card.typeAccount, 4)">
                 <app-card-deposit-account [card]="card"></app-card-deposit-account>
               </span>
+
             </div>
           </span>
         </div>
