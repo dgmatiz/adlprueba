@@ -3,6 +3,11 @@
   padding-left: 20px;
   padding-bottom: 30px;
 }
+
+.menu-vertical {
+  float: left;
+}
+
 .menu-vertical{
   margin-right: 0px;
   /*position: relative;*/

@@ -10,7 +10,7 @@ import {TypeAccount} from "../../core/models/typeAccount";
 export class HomeComponent implements OnInit, AfterViewInit {
   accounts: any[] = []
   products: any[] = []
-  viewcard: string = 'BANCO_3'
+  viewcard: string = 'BANCO_1'
 
   constructor(private communicatorService: CommunicatorService) {
   }
