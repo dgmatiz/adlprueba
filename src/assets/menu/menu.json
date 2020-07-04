@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "title": "Tus Productos",
+      "urlLink": "home",
+      "itemNew": true,
+      "enabled": true
+    },
+    {
+      "title": "Tu Organizador",
+      "urlLink": null,
+      "itemNew": false,
+      "enabled": true
+    },
+    {
+      "title": "Pagos",
+      "urlLink": null,
+      "itemNew": false,
+      "enabled": true
+    },
+    {
+      "title": "Transferencias",
+      "urlLink": null,
+      "itemNew": false,
+      "enabled": true
+    },
+    {
+      "title": "Certificados",
+      "urlLink": null,
+      "itemNew": false,
+      "enabled": true
+    },
+    {
+      "title": "Seguridad",
+      "urlLink": null,
+      "itemNew": false,
+      "enabled": true
+    }
+  ]
+}

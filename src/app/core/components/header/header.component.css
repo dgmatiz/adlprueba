@@ -1,0 +1,10 @@
+.menuHead{
+  right: 300px;
+}
+
+.userName {
+  float: left;
+  margin-left: 200px;
+  margin-top: 13px;
+  position: absolute;
+}

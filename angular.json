@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "adlprueba"
+    }
+  },
+  "defaultProject": "adlprueba",
+  "cli": {
+    "analytics": false
+  }
 }

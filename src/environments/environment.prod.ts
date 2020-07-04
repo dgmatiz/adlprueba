@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  urlDB: 'https://localhost:3000',
+  urlFather: 'https://localhost:4200',
 };

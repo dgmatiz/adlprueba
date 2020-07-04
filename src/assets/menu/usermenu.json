@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "title": "perfil",
+      "icon": "account_circle",
+      "itemNew": true,
+      "urlLink": null,
+      "enabled": true
+    },
+    {
+      "title": "Alertas",
+      "icon": "notifications_active",
+      "urlLink": null,
+      "itemNew": true,
+      "enabled": true
+    },
+    {
+      "title": "Salida Segura",
+      "icon": "exit_to_app",
+      "urlLink": null,
+      "itemNew": true,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+.logo{
+  padding:10px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+.menu-vertical{
+  position: relative;
+  width: 180px;
+  height: 100%;
+  padding: 10px;
+  border-right-color: gray;
+  border-right-style: groove;
+  border-right-width: 1px;
+}
+.nav{
+  width: 100%;
+  position: relative;
+  /*background: black;*/
+}
+
+li{
+  position: relative;
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-top-color: lightgray;
+  border-top-width: 0.5px;
+  border-top-style: groove;
+}
+
+li a{
+  text-align: center;
+  font-family: "Arial";
+  font-size: 0.7em;
+  color: black;
+}
+
+li a:hover{
+  color: blueviolet;
+}
+
+.new{
+  width: 100%;
+  text-align: center;
+}
+
+.blockquote{;
+  vertical-align: center;
+  height: 80px;
+}

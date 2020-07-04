@@ -1,0 +1,7 @@
+.content-principal{
+  float: right;
+  left: 200px;
+  z-index: 4;
+  position: absolute;
+  top: 60px;
+}

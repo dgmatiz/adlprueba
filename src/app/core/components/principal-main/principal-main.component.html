@@ -1,0 +1,16 @@
+<div class="menu-vertical">
+  <div class="logo">
+    <div class="row">
+      <img src="/assets/images/logo.jpg" width="140" >
+    </div>
+  </div>
+  <ul class="nav flex-column">
+    <li *ngFor="let optionmenu of menus" class="nav-item">
+      <div class="blockquote">
+        <a class="nav-link active" [routerLink]="optionmenu.urlLink">{{optionmenu.title}}<br>
+          <span *ngIf="optionmenu.itemNew" class="small new">¡Nuevo!</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
