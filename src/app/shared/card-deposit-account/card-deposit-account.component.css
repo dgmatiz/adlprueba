@@ -2,3 +2,7 @@ mat-icon{
   font-size: 40px!important;
   color: darkslategray;
 }
+
+.card-body{
+  height: 320px;
+}

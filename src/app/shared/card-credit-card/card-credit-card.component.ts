@@ -13,7 +13,6 @@ export class CardCreditCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.progressBarValue = this.getProgress()
-    console.log(this.progressBarValue)
   }
 
   getTypeCard() {

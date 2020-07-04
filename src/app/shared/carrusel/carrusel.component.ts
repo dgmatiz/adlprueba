@@ -15,8 +15,8 @@ export class CarruselComponent implements OnInit {
     dots: true,
     dotsEach: 1,
     navSpeed: 700,
-    items: 2,
-    margin: 50,
+    items: 1,
+    margin: 75,
     lazyLoad: true,
     nav: false,
   };

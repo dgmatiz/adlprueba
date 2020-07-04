@@ -1,23 +1,23 @@
-<div class="container border">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="text-body align-text-banner">
-        <h4>¿ Como se ven tus Finanzas ?</h4>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="carrusel">
-        <app-carrusel></app-carrusel>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="clearfix">
-  <div class="row">
-    <!--<div class="col-sm-12">-->
-    <div *ngFor="let value of accounts; let i = index" class="flex-sm-grow-0">
-      <div class="col-sm-12">
-        <div class="container">
+  <div class="main-content">
+    <div class="border">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="text-body align-text-banner">
+            <h5>¿ Como se ven tus Finanzas ?</h5>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="carrusel">
+            <app-carrusel></app-carrusel>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let value of accounts; let i = index" class="flex-sm-grow-0">
+        <div class="col-sm-12">
+          <!--<div class="container">-->
 
           <div *ngIf="haveViewCard(value, viewcard)" class="col-form-label">
             <strong>{{ value[0].typeAccount | translate }} ({{value.length}})</strong>
@@ -49,6 +49,7 @@
   </div>
 </div>
 <!--
+</div>
   </div>
 </div>
   <div class="row">

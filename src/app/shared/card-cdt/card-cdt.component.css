@@ -2,3 +2,8 @@ mat-icon{
   font-size: 40px!important;
   color: firebrick;
 }
+
+.card-body{
+  height: 320px;
+}
+
