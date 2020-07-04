@@ -1,29 +1,25 @@
-.menu-container{
+.menu-container {
+  padding-right: 20px;
+  /*
   padding-top: 5px;
   float: right;
   margin-right: 50px;
   z-index: 10;
+  */
 }
 
-.menuHead{
-  float: left;
-  margin-right: 15px;
-  margin-top: 2px;
-  padding-right: 50px;
-}
-
-.menu-icon{
+.menu-icon {
   position: absolute;
   margin-top: -1px;
   padding-left: 2px;
   padding-right: 40px;
 }
 
-li{
+li {
   padding-left: 20px;
 }
 
-li a{
+li a {
   border-left: lightgray;
   border-left-style: groove;
   border-left-width: 1px;
@@ -31,15 +27,15 @@ li a{
   color: #272822;
 }
 
-li a:hover{
+li a:hover {
   color: blueviolet;
 }
 
-.menu-icon{
+.menu-icon {
   padding-left: 8px;
   padding-right: 10px;;
 }
 
-a.active.item-0.nav-link{
+a.active.item-0.nav-link {
   border-left-style: none;
 }

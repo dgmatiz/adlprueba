@@ -11,6 +11,6 @@ export class CommunicatorService {
   }
 
   getData() {
-    return this.httpClient.get<Headers>(environment.urlFather + "/assets/data.json");
+    return this.httpClient.get<Headers>('./assets/data.json');
   }
 }

@@ -1,0 +1,17 @@
+<div class="card-body">
+  <div class="card-icon"><mat-icon>monetization_on</mat-icon></div>
+  <h5 class="card-title">{{ card.typeAccount | translate }}</h5>
+  <p class="card-text">No. {{card.accountInformation.accountIdentifier}}
+  </p>
+  <br>Saldo disponible:
+  <h2>{{card.productAccountBalances.saldo_disponible.amount| currency: '$'}}</h2>
+  <div class="row">
+    <div class="col-sm-6">En Bolsillo</div>
+    <div class="col-sm-6">Saldo Total</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">{{card.productAccountBalances.saldo_canje.amount| currency: '$'}}</div>
+    <div class="col-sm-6">{{card.productAccountBalances.saldo_actual.amount| currency: '$'}}</div>
+  </div>
+  <a href="#" class="btn btn-primary">Go somewhere</a>
+</div>

@@ -1,4 +1,71 @@
-<p>home works!</p>
-<!--<app-header></app-header>
-asdasdas
+<div class="container border">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="text-body align-text-banner">
+        ¿ Como se ven tus Finanzas ?
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="carrusel">
+        <app-carrusel></app-carrusel>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix">
+  <div class="row">
+    <!--<div class="col-sm-12">-->
+    <div *ngFor="let value of accounts; let i = index" class="flex-sm-grow-0">
+      <div class="col-sm-12">
+        <div class="container">
+
+          <div *ngIf="haveViewCard(value, viewcard)" class="col-form-label">
+            <strong>{{ value[0].typeAccount | translate }} ({{value.length}})</strong>
+          </div>
+
+          <span *ngFor="let card of value">
+            <div *ngIf="card.accountInformation.bank == viewcard" class="card card-account">
+              <span *ngIf="isTypeAcount(card.typeAccount, 4)">
+                <app-card-deposit-account [card]="card"></app-card-deposit-account>
+              </span>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+  </div>
+</div>
+  <div class="row">
+    <div class="col-sm-12">
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="row container-home">
+    <div class="col-sm-12">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <app-carrusel></app-carrusel>
+    </div>
+  </div>
+</div>
+
+<div class="main-panel">
+  <div class="main-content">
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/images/logo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
 -->
+

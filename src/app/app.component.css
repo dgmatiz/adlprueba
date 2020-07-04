@@ -1,7 +1,17 @@
-.content-principal{
-  float: right;
-  left: 200px;
-  z-index: 4;
-  position: absolute;
-  top: 60px;
+.container-adl{
+  position: relative;
+  width: 100%;
 }
+.menus{
+  float: left;
+  position: relative;
+  width: 180px;
+}
+.content-principal{
+  float: left;
+  width: 80%;
+  position: absolute;
+  left: 20%;
+}
+
+
