@@ -4,5 +4,18 @@
   "CREDIT_CARD": "Tarjeta de Crédito",
   "CURRENT_ACCOUNT": "Cuenta Corriente",
   "DEPOSIT_ACCOUNT": "Cuenta de Ahorros",
-  "Days": "Dias"
+  "Days": "Dias",
+  "pago_total_pesos": "Pago Total",
+  "cupo_disponible_avances_pesos": "Cupo disponible en avances",
+  "saldo_mora_pesos": "Saldo en mora",
+  "saldo_actual": "Saldo Actual",
+  "cupo_disponible_compras_pesos": "Cupo disponible en compras",
+  "valor_pago_minimo": "Valor minimo de pago",
+  "cupo_total": "Cupo Total",
+  "saldo_canje": "Saldo en canje",
+  "saldo_disponible": "Saldo disponible",
+  "saldo_canje_48_horas": "Saldo caje en 48 horas",
+  "saldo_canje_72_horas": "Saldo caje en 72 horas",
+  "saldo_canje_24_horas": "Saldo caje en 24 horas",
+  "saldo_ayer": "Saldo ayer"
 }

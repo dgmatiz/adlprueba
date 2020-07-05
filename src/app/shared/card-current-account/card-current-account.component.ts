@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-card-current-account',
@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardCurrentAccountComponent implements OnInit {
   @Input() card: any;
+  @Output() btnDetails = new EventEmitter();
 
   constructor() {
   }
@@ -22,5 +23,9 @@ export class CardCurrentAccountComponent implements OnInit {
       textBalance = "Saldo disponible:";
     }
     return textBalance;
+  }
+
+  detail() {
+    this.btnDetails.emit(this.card)
   }
 }

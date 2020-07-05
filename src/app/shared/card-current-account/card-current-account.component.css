@@ -1,8 +1,17 @@
 mat-icon{
   font-size: 40px!important;
-  color: darkblue;
+  color: darkslategray;
 }
 
 .card-body{
   height: 320px;
+}
+
+.btnHref{
+  color: dodgerblue;
+}
+
+.btnHref:hover{
+  cursor: pointer;
+  color:blueviolet;
 }

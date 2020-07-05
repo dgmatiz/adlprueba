@@ -1,10 +1,13 @@
 <div class="card-body">
-  <div class="card-icon"><mat-icon>money</mat-icon></div>
+  <div class="row">
+    <div class="col-sm-6 card-icon text-sm-left"><mat-icon>money</mat-icon></div>
+    <div class="col-sm-6 card-detail text-sm-right"><a class="btnHref" (click)="detail()">ver detalle ></a></div>
+  </div>
   <h3 class="card-title">{{ card.typeAccount | translate }}</h3>
   <p class="card-text">No. {{card.accountInformation.accountIdentifier}}
   </p>
   <br>{{getTextBalance()}}
-  <h2>{{card.productAccountBalances.saldo_disponible.amount| currency: '$'}}</h2>
+  <h4>{{card.productAccountBalances.saldo_disponible.amount| currency: '$'}}</h4>
 
   <div *ngIf="card.overDraftDays > 0" class="row">
     <div class="col-sm-12">Dias en Sobregiro : {{card.overDraftDays}}</div>

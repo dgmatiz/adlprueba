@@ -1,21 +1,23 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {TypeAccount} from "../../core/models/typeAccount";
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Modal} from "../../core/models/modal";
+//import {MaskcardPipe} from "../../pipes/maskcard.pipe";
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit, AfterViewInit{
+export class ModalComponent implements OnInit, AfterViewInit {
   card: any;
   @Input() modalActive: any;
-  @Output() btnModal:any = new EventEmitter();
+  @Output() btnModal: any = new EventEmitter();
+  accountInformation: Modal[]=[]
+  productAccountBalances: Modal[]=[]
 
   constructor() {
   }
 
   ngOnInit(): void {
-
   }
 
   ngAfterViewInit() {
@@ -23,6 +25,7 @@ export class ModalComponent implements OnInit, AfterViewInit{
   }
 
   close() {
+    this.productAccountBalances = []
     this.modalActive = false;
     this.btnModal.emit();
   }
@@ -30,6 +33,13 @@ export class ModalComponent implements OnInit, AfterViewInit{
   open(detail) {
     this.card = detail
     this.modalActive = true;
-    console.log("Que me llego===>",this.card)
+    this.getAccountBalances()
+  }
+
+  private getAccountBalances() {
+    for (let key in this.card.productAccountBalances) {
+      this.productAccountBalances.push({title: key, value: this.card.productAccountBalances[key].amount})
+    }
+
   }
 }

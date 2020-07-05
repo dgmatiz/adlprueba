@@ -1,7 +1,7 @@
 <div class="card-body">
   <div class="row">
     <div class="col-sm-6 card-icon text-sm-left"><mat-icon>monetization_on</mat-icon></div>
-    <div class="col-sm-6 card-detail text-sm-right"><a href="#">ver detalle ></a> </div>
+    <div class="col-sm-6 card-detail text-sm-right"><a class="btnHref" (click)="detail()">ver detalle ></a></div>
   </div>
   <h3 class="card-title font-weight-bold">{{ card.typeAccount | translate }}</h3>
   <p class="card-text">No. {{card.accountInformation.accountIdentifier}}

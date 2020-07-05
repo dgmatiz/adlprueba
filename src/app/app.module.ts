@@ -3,18 +3,17 @@ import {NgModule} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {ComponentsModule} from "./core/components/components.module";
-import {HomeComponent} from './pages/home/home.component';
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
 import {SharedModule} from "./shared/shared.module";
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {ComponentsModule} from "./core/components/components.module";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule} from "@angular/forms";
-//import { OwlModule } from 'ngx-owl-carousel';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+import {HomeComponent} from './pages/home/home.component';
+import {AppComponent} from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
-    MatIconModule,
     SharedModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
@@ -41,6 +39,8 @@ import {FormsModule} from "@angular/forms";
     FormsModule,
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

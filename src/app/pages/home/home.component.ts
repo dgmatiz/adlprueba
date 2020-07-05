@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild(ModalComponent) modal:ModalComponent;
   accounts: any[] = []
   products: any[] = []
-  viewcard: string = 'BANCO_2'
+  viewcard: string = 'BANCO_1'
   selectProduct: boolean = false;
   detail: any[] = [];
   activeModal: any = false;
