@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, EventEmitter, Output, ViewChild} from '@angular/core';
+import {ModalComponent} from "../modal/modal.component";
 
 @Component({
   selector: 'app-card-credit-card',
@@ -7,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardCreditCardComponent implements OnInit {
   @Input() card: any;
+  @Output() btnDetails = new EventEmitter();
   progressBarValue: any;
 
   constructor() { }
@@ -35,5 +37,9 @@ export class CardCreditCardComponent implements OnInit {
 
   getNumberCard(accountIdentifier: any) {
     return "XXXX XXXX XXXX " + accountIdentifier.substr(-4)
+  }
+
+  detail() {
+    this.btnDetails.emit(this.card)
   }
 }

@@ -1,6 +1,7 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {CommunicatorService} from "../../services/communicator.service";
 import {TypeAccount} from "../../core/models/typeAccount";
+import {ModalComponent} from "../../shared/modal/modal.component";
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,13 @@ import {TypeAccount} from "../../core/models/typeAccount";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild(ModalComponent) modal:ModalComponent;
   accounts: any[] = []
   products: any[] = []
   viewcard: string = 'BANCO_2'
   selectProduct: boolean = false;
+  detail: any[] = [];
+  activeModal: any = false;
 
   constructor(private communicatorService: CommunicatorService) {
   }
@@ -55,5 +59,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   private getAllBanks() {
 
+  }
+
+  openModal($event: any) {
+    this.detail = $event;
+    this.modal.open(this.detail)
+  }
+
+  closeModal($event: any){
+    this.detail = null
   }
 }

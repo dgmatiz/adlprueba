@@ -13,6 +13,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import { OtherProductComponent } from './other-product/other-product.component';
 import {RouterModule} from "@angular/router";
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {RouterModule} from "@angular/router";
     CardCurrentAccountComponent,
     CardCreditComponent,
     CardCdtComponent,
-    OtherProductComponent
+    OtherProductComponent,
+    ModalComponent
   ],
   exports: [
     NotificationComponent,
@@ -34,7 +36,8 @@ import {RouterModule} from "@angular/router";
     CardCreditComponent,
     CardCreditCardComponent,
     CardCurrentAccountComponent,
-    OtherProductComponent
+    OtherProductComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

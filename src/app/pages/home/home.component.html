@@ -40,7 +40,7 @@
                 <app-card-credit [card]="card"></app-card-credit>
               </span>
               <span *ngIf="isTypeAcount(card.typeAccount, 2)">
-                <app-card-credit-card [card]="card"></app-card-credit-card>
+                <app-card-credit-card (btnDetails)="openModal($event)" [card]="card"></app-card-credit-card>
               </span>
               <span *ngIf="isTypeAcount(card.typeAccount, 3)">
                 <app-card-current-account [card]="card"></app-card-current-account>
@@ -56,38 +56,6 @@
     </div>
   </div>
 </div>
-<!--
+<div>
+  <app-modal (btnModal)="closeModal($event)" [modalActive]="activeModal"></app-modal>
 </div>
-  </div>
-</div>
-  <div class="row">
-    <div class="col-sm-12">
-      <app-header></app-header>
-    </div>
-  </div>
-  <div class="row container-home">
-    <div class="col-sm-12">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <app-carrusel></app-carrusel>
-    </div>
-  </div>
-</div>
-
-<div class="main-panel">
-  <div class="main-content">
-    <div class="card" style="width: 18rem;">
-      <img src="/assets/images/logo.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
