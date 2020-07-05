@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.products.forEach(row => {
       this.accounts[TypeAccount[row.typeAccount]] = this.products.filter(value => value.typeAccount === row.typeAccount)
     });
+    console.log(this.accounts)
   }
 
   haveViewCard(value: any, viewcard: string) {

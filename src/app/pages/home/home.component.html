@@ -27,12 +27,12 @@
         <div class="col-sm-12">
           <!--<div class="container">-->
 
-          <div *ngIf="haveViewCard(value, viewcard)" class="col-form-label">
+          <div *ngIf="haveViewCard(value, viewcard) || selectProduct" class="col-form-label">
             <strong>{{ value[0].typeAccount | translate }} ({{value.length}})</strong>
           </div>
 
           <span *ngFor="let card of value">
-            <div *ngIf="card.accountInformation.bank == viewcard" class="card card-account">
+            <div *ngIf="card.accountInformation.bank == viewcard || selectProduct" class="card card-account">
               <span *ngIf="isTypeAcount(card.typeAccount, 0)">
                 <app-card-cdt [card]="card"></app-card-cdt>
               </span>
