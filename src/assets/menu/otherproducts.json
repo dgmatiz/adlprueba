@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cuenta Exprés >",
+    "icon": "directions_bike",
+    "urlLink": "home",
+    "enabled": true
+  },
+  {
+    "title": "Cuenta Protegida >",
+    "icon": "security",
+    "urlLink": "home",
+    "enabled": true
+  },
+  {
+    "title": "Tarjeta de Crédito >",
+    "icon": "credit_card",
+    "urlLink": "home",
+    "enabled": true
+  },
+  {
+    "title": "Compra de Cartera >",
+    "icon": "shopping_bag",
+    "urlLink": "home",
+    "enabled": true
+  }
+]
+

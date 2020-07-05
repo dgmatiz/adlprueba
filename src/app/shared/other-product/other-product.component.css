@@ -1,0 +1,45 @@
+.area-product {
+  width: 155px;
+  height: 155px;
+  float: left;
+}
+
+.button-box {
+  height: 150px;
+  width: 150px;
+  background: gainsboro;
+  float: left;
+  left: 10px;
+}
+
+.box-center {
+  padding-top: 40px;
+  padding-left: 58px;
+}
+
+.custom-radio {
+  background: gray;
+  width: 38px;
+  height: 38px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+}
+
+.mat-box {
+  padding-top: 4px;
+}
+
+.link-box {
+  padding-top: 20px;
+}
+
+a:hover, .custom-radio:hover{
+  color: blueviolet;
+}
+
+button-box:hover, .custom-radio:hover{
+  background: blueviolet;
+  color: white;
+}

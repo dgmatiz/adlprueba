@@ -2,6 +2,10 @@
   padding-top: 15px;
 }
 
+.home-body {
+  margin-top: 35px;
+}
+
 .main-content {
   padding-left: 211px;
   padding-right: 36px;
@@ -35,3 +39,16 @@
   margin: 5px;
 }
 
+.mat-slide-toggle {
+  float: left;
+}
+
+.title-button, .title-button span, .title-button span span {
+  float: left;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.title-button-interno {
+  padding-right: 15px;
+}

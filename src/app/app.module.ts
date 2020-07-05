@@ -12,6 +12,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {SharedModule} from "./shared/shared.module";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {FormsModule} from "@angular/forms";
 //import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({
@@ -35,6 +37,8 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
         deps: [HttpClient]
       }
     }),
+    MatSlideToggleModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

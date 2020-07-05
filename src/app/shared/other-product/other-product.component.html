@@ -1,0 +1,12 @@
+<div *ngFor="let product of products" class="area-product">
+  <div class="button-box">
+    <a [routerLink]="product.urlLink">
+      <div class="text-center box-center">
+        <div class="custom-radio">
+          <mat-icon class="mat-box">{{product.icon}}</mat-icon>
+        </div>
+      </div>
+      <div class="link-box text-center font-weight-bold">{{product.title}}</div>
+    </a>
+  </div>
+</div>

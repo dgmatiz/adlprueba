@@ -1,0 +1,21 @@
+.footer, .row-footer-interno {
+  padding-bottom: 40px;
+}
+
+.row-footer {
+  padding-top: 40px;
+}
+
+.finish-bar {
+  background: lightgrey;
+  height: 50px;
+}
+
+.text-bar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  background: whitesmoke;
+}

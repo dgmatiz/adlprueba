@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   accounts: any[] = []
   products: any[] = []
   viewcard: string = 'BANCO_2'
+  selectProduct: boolean = false;
 
   constructor(private communicatorService: CommunicatorService) {
   }
@@ -43,5 +44,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.products = data.product
       this.fillAccount()
     })
+  }
+
+  getOtherBanks() {
+    this.selectProduct = (this.selectProduct) ? false : true;
+    if(this.selectProduct == true){
+      this.getAllBanks()
+    }
+  }
+
+  private getAllBanks() {
+
   }
 }
