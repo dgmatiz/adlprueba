@@ -234,6 +234,7 @@
       "id": "5201897302970640",
       "typeAccount": "CREDIT_CARD",
       "dueDate": "2019-12-05T00:00:00",
+      "payDate": "2019-12-26T00:00:00",
       "productAccountBalances": {
         "pago_total_pesos": {
           "amount": 105968,

@@ -7,20 +7,37 @@
   <h3 class="card-title font-weight-bold">{{ card.typeAccount | translate }}</h3>
   <p class="card-text">No. {{card.accountInformation.accountIdentifier | maskcard}}
   </p>
-  <br>Cupo disponible:
-  <h4>{{card.productAccountBalances.cupo_disponible_compras_pesos.amount| currency: '$'}}</h4>
-  <div class="row">
-    <div class="col-sm-12">Fecha de Corte : {{card.dueDate| date:'shortDate'}}</div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-12">Total gastado : {{getTotalGastado()| currency: '$'}}</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
+  <div *ngIf="card.payDate != undefined">
+    <br>Próximo pago miimo:
+    <h4>{{card.productAccountBalances.valor_pago_minimo.amount| currency: '$'}}</h4>
+    <div class="row">
+      <div class="col-sm-12">Pago Total : {{card.productAccountBalances.pago_total_pesos.amount| currency: '$'}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">Fecha de Pago : {{card.payDate| date:'shortDate'}}</div>
+    </div>
+    <div class="row buttonpay">
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-primary btn-sm btn-block">PAGAR</button>
+      </div>
     </div>
   </div>
-      <div class="progress">
-        <mat-progress-bar mode="determinate" [value]="progressBarValue"></mat-progress-bar>
+  <div *ngIf="card.payDate == undefined">
+    <br>Cupo disponible:
+    <h4>{{card.productAccountBalances.cupo_disponible_compras_pesos.amount| currency: '$'}}</h4>
+    <div class="row">
+      <div class="col-sm-12">Fecha de Corte : {{card.dueDate| date:'shortDate'}}</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-12">Total gastado : {{getTotalGastado()| currency: '$'}}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="progress">
+          <mat-progress-bar mode="determinate" [value]="progressBarValue"></mat-progress-bar>
+        </div>
       </div>
+    </div>
+  </div>
 </div>
