@@ -3,6 +3,14 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+    "paths": {
+      "@adl/models/*" : ["./app/core/models/*"],
+      "@adl/components/*" : ["./app/core/components/*"],
+      "@adl/shared/*" : ["./app/shared/*"],
+      "@adl/services/*" : ["./app/services/*"],
+      "@adl/pages/*" : ["./app/pages/*"],
+      "@adl/pipes/*" : ["./app/pipes/*"],
+    },
     "types": []
   },
   "files": [

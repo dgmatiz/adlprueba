@@ -1,22 +1,21 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from "@angular/router";
-import {NotificationComponent} from "./notification/notification.component";
 import {MatIconModule} from "@angular/material/icon";
 import {TranslateModule} from "@ngx-translate/core";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 
-import {CarruselComponent} from './carrusel/carrusel.component';
-import {CardDepositAccountComponent} from './card-deposit-account/card-deposit-account.component';
-import {CardCreditCardComponent} from './card-credit-card/card-credit-card.component';
-import {CardCurrentAccountComponent} from './card-current-account/card-current-account.component';
-import {CardCreditComponent} from './card-credit/card-credit.component';
-import {CardCdtComponent} from './card-cdt/card-cdt.component';
-import {OtherProductComponent} from './other-product/other-product.component';
-import {MaskcardPipe} from "../pipes/maskcard.pipe";
-import {ModalComponent} from './modal/modal.component';
-
+import {NotificationComponent} from "@adl/shared/notification/notification.component";
+import {CarruselComponent} from '@adl/shared/carrusel/carrusel.component';
+import {CardDepositAccountComponent} from '@adl/shared/card-deposit-account/card-deposit-account.component';
+import {CardCreditCardComponent} from '@adl/shared/card-credit-card/card-credit-card.component';
+import {CardCurrentAccountComponent} from '@adl/shared/card-current-account/card-current-account.component';
+import {CardCreditComponent} from '@adl/shared/card-credit/card-credit.component';
+import {CardCdtComponent} from '@adl/shared/card-cdt/card-cdt.component';
+import {OtherProductComponent} from '@adl/shared/other-product/other-product.component';
+import {MaskcardPipe} from "@adl/pipes/maskcard.pipe";
+import {ModalComponent} from '@adl/shared/modal/modal.component';
 
 
 @NgModule({

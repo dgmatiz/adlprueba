@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HeaderComponent} from './header/header.component';
-import {UserMainComponent} from './user-main/user-main.component';
-import {PrincipalMainComponent} from './principal-main/principal-main.component';
 import {RouterModule} from "@angular/router";
 import {MatIconModule} from "@angular/material/icon";
-import {FooterComponent } from './footer/footer.component';
-import {SharedModule} from "../../shared/shared.module";
 
+import {HeaderComponent} from '@adl/components/header/header.component';
+import {UserMainComponent} from '@adl/components/user-main/user-main.component';
+import {PrincipalMainComponent} from '@adl/components/principal-main/principal-main.component';
+import {FooterComponent} from '@adl/components/footer/footer.component';
+import {SharedModule} from '@adl/shared/shared.module';
 
 @NgModule({
   declarations: [
