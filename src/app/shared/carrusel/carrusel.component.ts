@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 
 @Component({
@@ -7,6 +7,8 @@ import {OwlOptions} from "ngx-owl-carousel-o";
   styleUrls: ['./carrusel.component.css']
 })
 export class CarruselComponent implements OnInit {
+  @Input() cards: any;
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -22,6 +24,10 @@ export class CarruselComponent implements OnInit {
   };
 
   constructor() {
+  }
+
+  getResumen(){
+    this.cards.map()
   }
 
   ngOnInit(): void {

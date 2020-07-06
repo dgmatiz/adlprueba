@@ -1,14 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {AuthService} from "../../../services/auth.service";
 
-describe('HeaderComponent', () => {
+fdescribe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent ],
+      imports: [HttpClientTestingModule],
     })
     .compileComponents();
   }));
@@ -21,5 +24,10 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('validateUser() should return an boleean ', () => {
+    let validateUser = component.validateUser()
+    expect(validateUser).toEqual(false);
   });
 });

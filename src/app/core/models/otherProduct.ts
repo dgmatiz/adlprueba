@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   title: string;
   icon: string;
   urlLink: string;

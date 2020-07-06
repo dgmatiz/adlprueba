@@ -52,13 +52,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   getOtherBanks() {
     this.selectProduct = (this.selectProduct) ? false : true;
-    if(this.selectProduct == true){
-      this.getAllBanks()
-    }
-  }
-
-  private getAllBanks() {
-
   }
 
   openModal($event: any) {

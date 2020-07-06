@@ -5,3 +5,12 @@ export enum TypeAccount {
   CURRENT_ACCOUNT,
   DEPOSIT_ACCOUNT
 }
+
+export class Accounts{
+  constructor() {
+  }
+
+  isTypeAcount(typeAccount: string, validateNumber: number) {
+    return (TypeAccount[typeAccount] == validateNumber)
+  }
+}

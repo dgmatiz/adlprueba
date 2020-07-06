@@ -6,7 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MaskcardPipe implements PipeTransform {
 
   transform(value: string): string {
-    return "XXXX XXXX XXXX " + value.substr(-4);
+    if(value == null){
+      return null;
+    }else{
+      return "XXXX XXXX XXXX " + value.substr(-4);
+    }
   }
 
 }
