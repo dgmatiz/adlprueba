@@ -1,13 +1,13 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Modal} from "../../core/models/modal";
-//import {MaskcardPipe} from "../../pipes/maskcard.pipe";
+
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit, AfterViewInit {
+export class ModalComponent implements OnInit {
   card: any;
   @Input() modalActive: any;
   @Output() btnModal: any = new EventEmitter();
@@ -20,10 +20,6 @@ export class ModalComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-
-  }
-
   close() {
     this.productAccountBalances = []
     this.modalActive = false;
@@ -33,13 +29,14 @@ export class ModalComponent implements OnInit, AfterViewInit {
   open(detail) {
     this.card = detail
     this.modalActive = true;
-    this.getAccountBalances()
+    this.productAccountBalances = this.getAccountBalances(detail)
   }
 
-  private getAccountBalances() {
-    for (let key in this.card.productAccountBalances) {
-      this.productAccountBalances.push({title: key, value: this.card.productAccountBalances[key].amount})
+  getAccountBalances(detail) {
+    let modalArray: Modal[]=[]
+    for (let key in detail.productAccountBalances) {
+      modalArray.push({title: key, value: detail.productAccountBalances[key].amount})
     }
-
+    return modalArray;
   }
 }
