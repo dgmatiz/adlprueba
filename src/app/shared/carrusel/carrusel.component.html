@@ -1,25 +1,9 @@
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide>
-    <div class="slide">
+<owl-carousel-o class="carrusel-account" [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let row of totalAccount" >
+    <div  class="slide">
       <div class="row">
-        <div class="col-sm-6 small font-weight-bold">En productos<br> de ahorro tienes :</div>
-        <div class="col-sm-6 text-center"><h4>$2.351.000.00</h4></div>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <div class="row">
-        <div class="col-sm-6 small font-weight-bold">En productos<br> de ahorro tienes :</div>
-        <div class="col-sm-6 text-center"><h4>$2.351.000.00</h4></div>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <div class="row">
-        <div class="col-sm-6 small font-weight-bold">En productos<br> de ahorro tienes :</div>
-        <div class="col-sm-6 text-center"><h4>$2.351.000.00</h4></div>
+        <div class="col-sm-6 small font-weight-bold">En productos<br> de {{row.title | translate}} tienes :</div>
+        <div class="col-sm-6 small text-center"><h5>{{row.value | currency:'$'}}</h5></div>
       </div>
     </div>
   </ng-template>

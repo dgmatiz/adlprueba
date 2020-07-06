@@ -1,7 +1,8 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {CommunicatorService} from "../../services/communicator.service";
-import {TypeAccount} from "../../core/models/typeAccount";
-import {ModalComponent} from "../../shared/modal/modal.component";
+import {CommunicatorService} from "@adl/services/communicator.service";
+import {TypeAccount} from "@adl/models/typeAccount";
+import {ModalComponent} from "@adl/shared/modal/modal.component";
+import {CarruselComponent} from "@adl/shared/carrusel/carrusel.component";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ import {ModalComponent} from "../../shared/modal/modal.component";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild(ModalComponent) modal:ModalComponent;
+  @ViewChild(ModalComponent) modal: ModalComponent;
+  @ViewChild(CarruselComponent) carrusel: CarruselComponent;
   accounts: any[] = []
   products: any[] = []
   viewcard: string = 'BANCO_1'
@@ -24,6 +26,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.products.forEach(row => {
       this.accounts[TypeAccount[row.typeAccount]] = this.products.filter(value => value.typeAccount === row.typeAccount)
     });
+    this.carrusel.resumen(false);
   }
 
   haveViewCard(value: any, viewcard: string) {
@@ -52,6 +55,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   getOtherBanks() {
     this.selectProduct = (this.selectProduct) ? false : true;
+    this.carrusel.resumen(this.selectProduct);
   }
 
   openModal($event: any) {
@@ -59,7 +63,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.modal.open(this.detail)
   }
 
-  closeModal($event: any){
+  closeModal($event: any) {
     this.detail = null
   }
 }
