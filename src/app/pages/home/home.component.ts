@@ -66,4 +66,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   closeModal($event: any) {
     this.detail = null
   }
+
+  totalViewCard(value: any, viewcard: string) {
+    if(this.selectProduct == false){
+      return value.filter(x => x.accountInformation.bank == viewcard).length;
+    }
+    else{
+      return value.length
+    }
+  }
 }

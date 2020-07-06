@@ -26,7 +26,7 @@
       <div *ngFor="let value of accounts; let i = index" class="flex-sm-grow-0">
         <div class="col-sm-12">
           <div *ngIf="haveViewCard(value, viewcard) || selectProduct" class="col-form-label">
-            <strong>{{ value[0].typeAccount | translate }} ({{value.length}})</strong>
+            <strong>{{ value[0].typeAccount | translate }} ({{totalViewCard(value, viewcard)}})</strong>
           </div>
 
           <span *ngFor="let card of value">
